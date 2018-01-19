@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ButtonBar?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.media.MediaView?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" onMouseMoved="#onMouseOver" prefHeight="494.0" prefWidth="1099.0" style="-fx-background-color: #d68e29;" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="movies.GUI.FXMLDocumentController">
+    <children>
+        <Label fx:id="label" layoutX="126" layoutY="120" minHeight="16" minWidth="69" />
+      <Button fx:id="btnRemove2Category" layoutX="114.0" layoutY="403.0" mnemonicParsing="false" onAction="#buttonRemoveCategory" prefHeight="25.0" prefWidth="97.0" text="Remove" textFill="RED" />
+      <Button fx:id="btnAddCategory" layoutX="14.0" layoutY="403.0" mnemonicParsing="false" onAction="#buttonAddCategory" prefHeight="25.0" prefWidth="97.0" text="Add" textFill="RED" />
+      <TextField fx:id="srcBar" layoutX="888.0" layoutY="12.0" onAction="#searchBar" />
+      <Label layoutX="14.0" layoutY="57.0" prefHeight="17.0" prefWidth="200.0" text="Categories" textFill="WHITE" underline="true" />
+      <Label layoutX="238.0" layoutY="57.0" prefHeight="17.0" prefWidth="200.0" text="Movies" textFill="WHITE" underline="true" />
+      <Label layoutX="14.0" layoutY="6.0" prefHeight="25.0" prefWidth="213.0" text="Cinema Library" textFill="WHITE">
+         <font>
+            <Font size="29.0" />
+         </font>
+      </Label>
+      <TableView fx:id="listTableMovies" layoutX="238.0" layoutY="76.0" prefHeight="321.0" prefWidth="287.0">
+        <columns>
+          <TableColumn fx:id="collumTitle" prefWidth="159.0" text="Title" />
+            <TableColumn fx:id="collumImdb" prefWidth="44.0" text="Imdb" />
+          <TableColumn fx:id="collumPersonalsco" prefWidth="83.0" text="Personal sco" />
+        </columns>
+      </TableView>
+      <TableView fx:id="listTableCategories" layoutX="14.0" layoutY="76.0" prefHeight="321.0" prefWidth="200.0">
+        <columns>
+          <TableColumn fx:id="collumCategories" prefWidth="199.0" text="Categories" />
+        </columns>
+      </TableView>
+      <Button fx:id="btnAddMovie" layoutX="238.0" layoutY="403.0" mnemonicParsing="false" onAction="#buttonAddMovie" prefHeight="25.0" prefWidth="110.0" text="Add" />
+      <Button fx:id="btnRemoveMovie" layoutX="354.0" layoutY="403.0" mnemonicParsing="false" onAction="#buttonRemoveMovie" prefHeight="25.0" prefWidth="117.0" text="Remove" />
+      <Button fx:id="btnFilter" layoutX="820.0" layoutY="12.0" mnemonicParsing="false" onAction="#buttonFilter" text="Filter" />
+      <MediaView fx:id="mv" fitHeight="200.0" fitWidth="200.0" layoutX="559.0" layoutY="78.0" />
+      <ButtonBar layoutX="118.0" layoutY="440.0" prefHeight="40.0" prefWidth="320.0">
+         <buttons>
+            <Button minWidth="51.0" mnemonicParsing="false" onAction="#buttonMoviePlay" prefHeight="31.0" text="Play" />
+            <Button minWidth="53.0" mnemonicParsing="false" onAction="#buttonStop" prefHeight="31.0" prefWidth="47.0" text="Stop" />
+            <Button fx:id="buttonMoviePause" minWidth="59.0" mnemonicParsing="false" onAction="#buttonMoviePause" prefHeight="31.0" text="Pause" />
+            <Button minWidth="63.0" mnemonicParsing="false" onAction="#buttonScore" prefHeight="31.0" text="Score" />
+         </buttons>
+      </ButtonBar>
+    </children>
+</AnchorPane>
